@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <!-- Slide meta data, remove/edit as you see fit -->
+    <title>Vagrant</title>
+    <meta name="author" content="André Wendt" />
+    <meta name="date" content="2011-06-08" />
+    <meta name="venue" content="Ruby User Group Berlin" />
+    <!-- Slippy core file and dependencies -->
+    <script type="text/javascript" src="jquery-1.4.2.min.js"></script>
+    <script type="text/javascript" src="jquery.history.js"></script>
+    <script type="text/javascript" src="kerryb.js"></script>
+    <script type="text/javascript" src="slippy-0.9.0.js"></script>
+    <!-- Slippy structural styles -->
+    <link type="text/css" rel="stylesheet" href="slippy-0.9.0.css"/>
+    <!-- Slippy theme -->
+    <link type="text/css" rel="stylesheet" href="slippy-kerryb.css"/>
+    <!-- Slippy init code -->
+    <script type="text/javascript">
+      $(function() {
+        $(".slide").slippy({});
+      });
+    </script>
+  </head>
+  <body>
+    <div class="slide">
+      <h1>Project environments made easy</h1>
+      <!-- <div class="center">
+        <img class="leavealone" style="width:250px;height:250px" src="images/vagrant.png" />
+      </div> -->
+      <h2 class="center">André Wendt<br />RUG::B, June 8, 2011</h2>
+      <div class="licence">
+        <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/"><img
+          class="leavealone"
+          alt="Creative Commons License"
+          src="http://i.creativecommons.org/l/by-sa/3.0/88x31.png" /></a>
+      </div>
+      <div class="footer">
+        <span class="left">Use space bar or arrow keys to navigate, and escape for index.</span>
+        <span class="right">Built with <a href="https://github.com/Seldaek/slippy">Slippy</a>.
+        </span>
+      </div>
+    </div>
+
+    <div class="slide">
+      <h1>About me</h1>
+      <div class="vcenter">
+        <ul>
+          <li>Software developer at Infopark</li>
+          <li>Ruby+Rails, Javascript, TDD</li>
+          <li><a href="https://github.com/awendt">github.com/awendt</a></li>
+          <li><a href="http://twitter.com/awendt">twitter.com/awendt</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="slide">
+      <h1>Motivation</h1>
+    </div>
+
+    <div class="slide">
+      <h1>Motivation</h1>
+      <h2>Have you ever…</h2>
+      <div class="vcenter">
+        <ul>
+          <li>handed over a complex project setup?</li>
+          <li>toggled project-specific configs?</li>
+          <li>gotten back to a project after months?</li>
+          <li>helped get a co-worker up &amp; running?</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="slide">
+      <h1>Motivation</h1>
+      <h2 class="vcenter">…without feeling a lot of pain?</h2>
+    </div>
+
+    <div class="slide">
+      <h1>Motivation</h1>
+      <h2 class="vcenter">What it usually boils down to…</h2>
+    </div>
+
+    <div class="slide">
+      <h1>Motivation</h1>
+      <h2>All-new development environment for a single project:</h2>
+      <div class="center">
+        <img class="leavealone" src="images/single.jpg" alt="Decay" />
+      </div>
+      <div class="footer">
+        <span class="left">Photo credit:<br />
+        <a href="http://www.flickr.com/photos/diamond_rain/2134673924/">Walking the tracks</a><br />by Kate &amp; Jen</span>
+      </div>
+    </div>
+
+    <div class="slide">
+      <h1>Motivation</h1>
+      <h2 class="vcenter">Next: Install a few gems, …</h2>
+    </div>
+
+    <div class="slide">
+      <h1>Motivation</h1>
+      <h2 class="vcenter">…, tweak a little config, …</h2>
+    </div>
+
+    <div class="slide">
+      <h1>Motivation</h1>
+      <h2 class="vcenter">…, upgrade that library, …</h2>
+    </div>
+
+    <div class="slide">
+      <h1>Motivation</h1>
+      <h2 class="vcenter">…, and BOOM!</h2>
+    </div>
+
+    <div class="slide">
+      <h1>Motivation</h1>
+      <h2>A few projects later:</h2>
+      <div class="center">
+        <img class="leavealone" src="images/complex.jpg" alt="Decay" />
+      </div>
+      <div class="footer">
+        <span class="left">Photo credit:
+          <a href="http://www.flickr.com/photos/archeon/374674433/">railroad tracks</a> by hans s
+        </span>
+      </div>
+    </div>
+
+    <div class="slide">
+      <h1>Motivation</h1>
+      <h2>Questions you now start to dread</h2>
+      <div class="vcenter">
+        <ul>
+          <li>Can you help me debug X?</li>
+          <li>Why did I change that config?</li>
+          <li>Can you help me set everything up?</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="slide">
+      <h1>Enter Vagrant</h1>
+      <div class="center">
+        <img class="leavealone" src="images/vagrant.png" />
+      </div>
+    </div>
+
+    <div class="slide">
+      <h1>Enter Vagrant</h1>
+      <div class="center">
+        <img class="leavealone" src="images/vagrant.png" />
+      </div>
+      <h2>{n} a wanderer, </h2>
+      <h2>a person without a home or job</h2>
+    </div>
+
+    <div class="slide">
+      <h1>Enter Vagrant</h1>
+      <div class="center">
+        <img class="leavealone" src="images/vagrant.png" />
+      </div>
+      <h2>“A tool for building and distributing virtualized development environments.”</h2>
+    </div>
+
+    <div class="slide">
+      <h1>Why Vagrant?</h1>
+      <h2>Benefits</h2>
+      <div class="vcenter">
+        <ul>
+          <li>automated setup with Chef</li>
+          <li>rebuild instantly</li>
+          <li>dedicated environment for each project</li>
+          <li>consistent and portable for teams</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="slide">
+      <h1>Team play</h1>
+    </div>
+
+    <div class="slide">
+      <h1>Team play</h1>
+      <h2>VirtualBox + Vagrant + Chef</h2>
+      <div class="center">
+        <img class="leavealone" src="images/env.png" alt="Ecosystem" />
+      </div>
+    </div>
+
+    <div class="slide">
+      <h1>Team play</h1>
+      <h2>VirtualBox + Vagrant + Chef</h2>
+      <div class="vcenter">
+        <ul>
+          <li>VM courtesy of VirtualBox</li>
+          <li>Configuration management with Chef</li>
+          <li>Vagrant as mediator in between</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="slide">
+      <h1>Team play</h1>
+      <div class="vcenter center">
+        <table>
+          <tr>
+            <td>Project A</td>
+            <td>Project B</td>
+          </tr>
+          <tr>
+            <td>Chef</td>
+            <td>Chef</td>
+          </tr>
+          <tr>
+            <td>VM</td>
+            <td>VM</td>
+          </tr>
+          <tr>
+            <td colspan="2">Base Box</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+
+    <div class="slide">
+      <h1>Team play</h1>
+      <h2>Project setups contain</h2>
+      <div class="vcenter">
+        <ul>
+          <li>base box (shared between projects)</li>
+          <li>the Vagrantfile</li>
+          <li>Chef cookbooks</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="slide">
+      <h1>Getting started</h1>
+    </div>
+
+    <div class="slide">
+      <h1>Getting started</h1>
+      <h2>What you need</h2>
+      <div class="vcenter">
+        <ul>
+          <li>Download <a href="http://www.virtualbox.org/wiki/Downloads">VirtualBox</a></li>
+          <li>gem install vagrant</li>
+          <li>gem install chef</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="slide">
+      <h1>Getting started</h1>
+      <h2>Life cycle: Selected commands</h2>
+      <div class="vcenter">
+        <ul>
+          <li>vagrant init</li>
+          <li>vagrant up</li>
+          <li>vagrant reload</li>
+          <li>vagrant provision</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="slide">
+      <h1>Getting started</h1>
+      <h2>the Vagrantfile</h2>
+      <div class="vcenter">
+        <ul>
+          <li>selects box to be used</li>
+          <li>controls the provisioner (Chef, Puppet)</li>
+          <li>configures networking</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="slide">
+      <h1>Demo</h1>
+    </div>
+
+    <div class="slide">
+      <h1>At your service!</h1>
+      <h2>What Vagrant takes care of for you</h2>
+      <div class="vcenter">
+        <ul>
+          <li>SSH config</li>
+          <li>port forwarding</li>
+          <li>SSH agent forwarding</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- <div class="slide">
+      <h1>Achtung!</h1>
+    </div>
+
+    <div class="slide">
+      <h1>Achtung!</h1>
+      <h2>Worte der Warnung</h2>
+      <div class="vcenter">
+        <ul>
+          <li>Auth-Agent beim Provisioning nicht verfügbar — authentifiziertes git-clone?</li>
+          <li>NFS-Ordner sind schnarchlangsam</li>
+          <li>Vagrant erzwingt keine Versionierung</li>
+        </ul>
+      </div>
+    </div> -->
+
+    <div class="slide">
+      <h1>Thank you very much!</h1>
+      <h2>Questions, anyone?</h2>
+      <div class="footer">
+        <span class="vcenter center">Note: This presentation is available on GitHub.</span>
+      </div>
+    </div>
+
+  </body>
+</html>
